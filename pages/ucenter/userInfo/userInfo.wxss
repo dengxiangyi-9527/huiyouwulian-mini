@@ -1,0 +1,97 @@
+/* pages/ucenter/userInfo/userInfo.wxss */
+
+
+.infoImg{
+  width: 130rpx;
+  height: 130rpx;
+  float: left;
+  border-radius: 50%;
+/* margin-left: 20rpx; */
+margin-right: 30rpx;
+  margin-left: 20rpx;
+
+}
+.name{
+  font-size: 30rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  background-color: #fff;
+
+}
+.nickName{
+  color: #f66;
+}
+.myIdenterty{
+  height: 90rpx;
+  line-height: 90rpx;
+border-top: 1rpx solid #ededed;
+  
+}
+
+.wrap{
+  background-color: #fff;
+  /* margin-left: 20rpx; */
+  padding-top: 20rpx;
+padding-left: 20rpx;
+
+}
+.wrap1{
+  background-color: #fff;
+   height: 90rpx;
+  line-height: 90rpx;
+  margin: 20rpx 0;
+  padding-left: 20rpx;
+  font-size: 26rpx;
+
+}
+.layOut{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  background-color: #fff;
+  padding-top: 30rpx;
+
+}
+.btn{
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  background-color: rgba(255, 102, 102, 0.788);
+  color: #fff;
+}
+.userIcon{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 15rpx;
+}
+
+/*  选中 */
+.form-default text{
+  color: #62788d;
+}
+.weiSel{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  position: absolute;
+  left: 130rpx;
+}
+.default-input {
+  width: 490rpx;
+  margin: 40rpx auto;
+  height: 40rpx;
+  padding-left: 50rpx;
+  line-height: 40rpx;
+  /* background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 1rpx -448rpx no-repeat;
+  background-size: 38rpx 486rpx; */
+  font-size: 28rpx;
+}
+
+/* .default-input.selected {
+  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 0 -192rpx no-repeat;
+  background-size: 38rpx 486rpx;
+} */

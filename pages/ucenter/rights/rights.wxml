@@ -1,0 +1,31 @@
+<!--pages/myequi/myequiAdd/myequiAdd.wxml-->
+
+  <view class="form_box">
+     <view class="form_item">
+      <view class="item_label">收货人姓名</view>
+      <view class="item_info"><input placeholder="请输入收获人姓名" value="{{info.name}}" bindinput="getName"></input></view>
+    </view>
+    <view class="form_item">
+      <view class="item_label">收货人电话</view>
+      <view class="item_info"><input placeholder="请输入收获人手机号" value="{{info.phoneNum}}" bindinput="getPhoneNum"></input></view>
+    </view>
+     <view class="form_item">
+      <view class="item_label">收货人地区</view>
+      <view class="item_info"><input placeholder="请输入收获人地区" value="{{locationArea.address}}"  bindtap="getLocation"></input></view>
+      <!-- <button bindtap="map">定位</button> -->
+    </view>
+    <view class="form_item">
+      <view class="item_label"> 详细地址</view>
+      <view class="item_info"><input placeholder="请输入收获人详细地址" value="{{info.areaDetail}}" bindinput="getAreaDetail"></input></view>
+    </view>
+    
+   
+    <!-- <view class="form_item">
+      <view class="item_label">所在楼层</view>
+      <view class="item_info"><input placeholder="请输入所在楼层" bindinput="getFloor"></input></view>
+    </view> -->
+    
+  </view>
+  <view class="form_btn" bindtap="goBind">
+    提交
+  </view>

@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="toast">您还没绑定手机号！</view>
+    <view class="wrap">
+    <image wx:if="{{!isToast}}" class="icon" src="/static/images/mobile22.png"></image>
+    <image wx:if="{{isToast}}" class="icon" src="/static/images/mobile11.png"></image>
+    <input placeholder="输入手机号" class="ipt"  bindinput="getPhone"></input>
+    <!-- <button size="mini"  class="btn" bindtap="getCode">获取验证码</button> -->
+    </view>
+    <view class="wrap22">
+    <image wx:if="{{!show}}" class="icon" src="/static/images/code.png"></image>
+    <image wx:if="{{show}}" class="icon" src="/static/images/code11.png"></image>
+    <input placeholder="输入验证码" class="ipt2" bindinput="confirmCode" value="{{code}}" data-value="{{code}}"></input>
+    <!-- <text class="btn1" wx:if="{{timeout}}"> -->
+    <van-count-down use-slot time="{{ time }}" wx:if="{{timeout}}" bind:change="onChange">
+  <text class="btn">{{ timeData.seconds }}秒后获取</text>
+</van-count-down>
+    <text class="btn" catchtap="getCode" wx:if="{{timeout==false}}">获取验证码</text>
+    <!-- <van-count-down time="{{ time }}" /> -->
+    </view>
+     <view class="wrap1">
+    <image wx:if="{{!isToast}}" class="icon" src="/static/images/icode.png"></image>
+    <image wx:if="{{isToast}}" class="icon" src="/static/images/icode1.png"></image>
+    <input placeholder="邀请码非必输" value="{{inviteCode}}" class="ipt" data-value="{{inviteCode}}" bindinput="getInviteCode"></input>
+    <!-- <button size="mini"  class="btn" bindtap="getCode">获取验证码</button> -->
+    </view>
+    <view class="login-wrap">
+    <image class="login" src="/static/images/login22.png" bindtap="login1" wx:if="{{!show}}"></image>
+    <!-- <view class="login1" wx:if="{{!show}}" bindtap="login">绑定</view> -->
+    <view class="login1" wx:if="{{show}}" bindtap="login">绑定</view>
+    </view>
+ 
+</view>

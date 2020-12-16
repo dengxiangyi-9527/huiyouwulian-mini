@@ -1,0 +1,640 @@
+{
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.4.0",
+  "appid": "wxc6e930f7ff63df39",
+  "projectname": "wx-mini",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "专题",
+          "pathName": "pages/topic/topic",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "专题详情",
+          "pathName": "pages/topicDetail/topicDetail",
+          "query": "id=314"
+        },
+        {
+          "id": -1,
+          "name": "专题评论列表",
+          "pathName": "pages/topicComment/topicComment",
+          "query": "valueId=314&type=1"
+        },
+        {
+          "id": -1,
+          "name": "专题评论添加",
+          "pathName": "pages/topicCommentPost/topicCommentPost",
+          "query": "valueId=314&type=1"
+        },
+        {
+          "id": -1,
+          "name": "品牌",
+          "pathName": "pages/brand/brand",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "品牌详情",
+          "pathName": "pages/brandDetail/brandDetail",
+          "query": "id=1001000"
+        },
+        {
+          "id": -1,
+          "name": "人气推荐",
+          "pathName": "pages/hotGoods/hotGoods",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "新品首发",
+          "pathName": "pages/newGoods/newGoods",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "分类",
+          "pathName": "pages/catalog/catalog",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "分类详情",
+          "pathName": "pages/category/category",
+          "query": "id=1008002"
+        },
+        {
+          "id": -1,
+          "name": "查找",
+          "pathName": "pages/search/search",
+          "query": ""
+        },
+        {
+          "id": 12,
+          "name": "商品",
+          "pathName": "pages/goods/goods",
+          "query": "id=1181003"
+        },
+        {
+          "id": -1,
+          "name": "商品评论列表",
+          "pathName": "pages/comment/comment",
+          "query": "valueId=1181000&type=0"
+        },
+        {
+          "id": -1,
+          "name": "购物车",
+          "pathName": "pages/cart/cart",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "下单",
+          "pathName": "pages/checkout/checkout",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "支付结果",
+          "pathName": "pages/payResult/payResult",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/ucenter/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的订单列表",
+          "pathName": "pages/ucenter/order/order",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的订单详情",
+          "pathName": "pages/ucenter/orderDetail/orderDetail",
+          "query": "id=1"
+        },
+        {
+          "id": 22,
+          "name": "待评价的订单详情",
+          "pathName": "pages/ucenter/orderDetail/orderDetail",
+          "query": "id=1"
+        },
+        {
+          "id": -1,
+          "name": "购买商品评价",
+          "pathName": "pages/commentPost/commentPost",
+          "query": "orderId=2&type=0&valueId=1116011"
+        },
+        {
+          "id": 22,
+          "name": "我的优惠券",
+          "pathName": "pages/ucenter/couponList/couponList",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的收藏",
+          "pathName": "pages/ucenter/collect/collect",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的足迹",
+          "pathName": "pages/ucenter/footprint/footprint",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的地址",
+          "pathName": "pages/ucenter/address/address",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的地址添加",
+          "pathName": "pages/ucenter/addressAdd/addressAdd",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "登录",
+          "pathName": "pages/auth/login/login",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "账号登录",
+          "pathName": "pages/auth/accountLogin/accountLogin",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "注册",
+          "pathName": "pages/auth/register/register",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "找回密码",
+          "pathName": "pages/auth/reset/reset",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "关于",
+          "pathName": "pages/about/about",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "测试更新",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "意见反馈",
+          "pathName": "pages/ucenter/feedback/feedback",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "团购专区",
+          "pathName": "pages/groupon/grouponList/grouponList",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "选择优惠券",
+          "pathName": "pages/ucenter/couponSelect/couponSelect",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的优惠券列表",
+          "pathName": "pages/ucenter/couponList/couponList",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "优惠券列表",
+          "pathName": "pages/coupon/coupon",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的设备",
+          "pathName": "pages/myequi/myequi",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "帮助中心",
+          "pathName": "pages/help/help",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的设备",
+          "pathName": "pages/myequi/myequi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "激活设备",
+          "pathName": "pages/myequi/myequiAdd/myequiAdd",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 42,
+          "name": "配送详情",
+          "pathName": "pages/ucenter/awaitDistributionDetail/awaitDistributionDetail",
+          "query": "type=2&&index=0",
+          "scene": null
+        },
+        {
+          "id": 43,
+          "name": "待配送",
+          "pathName": "pages/ucenter/awaitDistribution/awaitDistribution",
+          "query": "type=2",
+          "scene": null
+        },
+        {
+          "id": 44,
+          "name": "认领中心",
+          "pathName": "pages/ucenter/claimTask/claimTask",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "已配送",
+          "pathName": "pages/ucenter/shippedDistribution/shippedDistribution",
+          "query": "type=3",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/goods/goods",
+          "pathName": "pages/goods/goods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/claimTask/claimTask",
+          "pathName": "pages/ucenter/claimTask/claimTask",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/myequi/myequiAdd/myequiAdd",
+          "pathName": "pages/myequi/myequiAdd/myequiAdd",
+          "query": "type=2&&index=0",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "实名认证",
+          "pathName": "pages/ucenter/certification/certification",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "饮用水",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 51,
+          "name": "更多好物",
+          "pathName": "pages/category/category",
+          "query": "categoryId:1036008",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "Id=1036008",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "name:\"饮用水\"",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "id=0",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "categoryId=1036008",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "权益",
+          "pathName": "pages/ucenter/rights/rights",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/index/index",
+          "pathName": "pages/ucenter/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/userInfo/userInfo",
+          "pathName": "pages/ucenter/userInfo/userInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/acount/acount",
+          "pathName": "pages/ucenter/acount/acount",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 60,
+          "name": "个人信息",
+          "pathName": "pages/ucenter/userInfo/userInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "热卖",
+          "pathName": "pages/hotGoods/hotGoods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "添加设备",
+          "pathName": "pages/myequi/myequiAdd/myequiAdd",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "地址管理",
+          "pathName": "pages/ucenter/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "编辑地址",
+          "pathName": "pages/ucenter/addressAdd/addressAdd",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/checkout/checkout",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/brand/brand",
+          "pathName": "pages/brand/brand",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/brandDetail/brandDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "饮用水",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "茶吧机认领",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的账户",
+          "pathName": "pages/ucenter/acount/acount",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登陆",
+          "pathName": "pages/auth/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "注销协议",
+          "pathName": "pages/agreement/agreement/agreement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "微信登录",
+          "pathName": "pages/auth/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "相机",
+          "pathName": "pages/cinema/cinema",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "商品详情",
+          "pathName": "pages/goods/goods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登陆",
+          "pathName": "pages/auth/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/ucenter/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/cinema/cinema",
+          "pathName": "pages/cinema/cinema",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/getMobile/getMobile",
+          "pathName": "pages/ucenter/getMobile/getMobile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/awaitDistributionDetail/awaitDistributionDetail",
+          "pathName": "pages/ucenter/awaitDistributionDetail/awaitDistributionDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ucenter/getMobile/getMobile",
+          "pathName": "pages/ucenter/getMobile/getMobile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "积分互转",
+          "pathName": "pages/ucenter/countRotation/countRotation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "积分详情",
+          "pathName": "pages/ucenter/countDetail/countDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "地址",
+          "pathName": "pages/ucenter/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "分享",
+          "pathName": "pages/ucenter/share/share",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "积分详情",
+          "pathName": "pages/ucenter/countDetail/countDetail",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

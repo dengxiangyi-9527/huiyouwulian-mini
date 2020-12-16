@@ -1,0 +1,148 @@
+<view class="container">
+  <view class="order-info">
+    <view class="title">
+    <image class="tit-icon" src="/static/images/1.png"></image>基本信息</view>
+    <view class="item"><image class="item-icon" src="/static/images/goods.png"></image><text >商品名称:</text>  {{deliveryList.deliveryId}}、 {{deliveryList.goodsName}}</view>
+    <view class="item"><image class="item-icon" src="/static/images/dizhi.png"></image><text >订单地址：</text>{{deliveryList.addressDetail}}</view>
+    <view class="item" wx:if="{{type == 3}}"><text >配送袋数:</text>{{deliveryList.deliveryNum }} <text>(袋)</text></view>
+    <view class="item" wx:if="{{type == 3}}"><text >配送流量:</text>{{deliveryList.deliveryFlow }} <text>(L)</text></view>
+    <view class="item"><image class="item-icon" src="/static/images/wode.png"></image><text >联系人：</text>{{deliveryList.memberName}}</view>
+    <view class="item"><image class="item-icon" src="/static/images/call.png"></image><text >联系人电话：</text>{{deliveryList.memberPhone}}</view>
+    <view class="item"><image class="item-icon" src="/static/images/num.png"></image><text >剩余数量：</text>{{deliveryList.remainNum}}</view>
+     <view class="item"><image class="item-icon" src="/static/images/xiangqing.png"></image><text >备注：</text>{{deliveryList.remarks}}</view>
+  </view>
+
+  <view class="address-list">
+    <view class="h">
+      <view class="title"><image class="tit-icon" src="/static/images/2.png"></image>配送商品</view>
+    </view>
+    <view class="goods">
+      <view class="item">
+          <view class="l">
+          <image class="l_pic" src="{{deliveryList.goodsPicUrl}}"></image>
+            
+          </view>
+          <view class="c">
+            <view class="mobile">{{deliveryList.goodsName}}</view>
+            <view class="address">{{deliveryList.deliveryAddress}}</view>
+          </view>
+       
+      </view>
+    </view>
+    </view>
+    <view class="add_box" wx:if="{{deliveryList.deliveryType == 1&&deliveryList.deliveryStatus == 2}}">
+    <view class="title"><image class="tit-icon" src="/static/images/3.png"></image>设备编号
+    </view >
+    <image class="addmore"  src="/static/images/addmore.png" catchtap="addMore" wx:if="{{deliveryList.deliveryType == 1&&deliveryList.deliveryStatus == 2&&status==0}}"></image>
+    <view class="equi-wrap" wx:for="{{equiList}}" wx:key="index" data-id="{{item.deliveryId}}">
+    <view class="equiNum_wrap">
+    <view class="equiNum">设备编号：{{item.deviceId}}</view>
+    <view class="equiNum">剩余流量：{{item.residualFlow}} L</view>
+    </view>
+    <view class="add-wrap"> 
+      <view class="add_box_bag">
+        <view class="addbag">袋数</view>
+        <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="sign {{item.rechargeFlow <= 0 ? 'disabled' : 'normal'}}" bindtap="delCount" data-index="{{index}}"  data-value="{{item.rechargeFlow}}">-</text>  
+          <!-- 数值 -->  
+          <input class="number" type="number" bindchange="bindManual" data-index="{{index}}" data-value="{{item.rechargeFlow}}" value="{{item.rechargeFlow}}"  />  
+          <!-- 加号 -->  
+          <text class="sign {{item.rechargeFlow >= 1000 ? 'disabled' : 'normal'}}" bindtap="addCount" data-index="{{index}}" data-value="{{item.rechargeFlow}}">+</text>  
+        </view>  
+      </view>
+      <view class="add_box_bag">
+        <view class="addbag">流量</view>
+        <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="sign {{item.adjustValue <= -15 ? 'disabled' : 'normal'}}" bindtap="redelCount" data-index="{{index}}" >-</text>  
+          <!-- 数值 -->  
+          <input class="number" type="number" bindchange="rebindManual" data-index="{{index}}" data-value="{{item.adjustValue}}" value="{{item.adjustValue}}"  />  
+          <!-- 加号 -->  
+          <text class="sign {{item.adjustValue >= 15 ? 'disabled' : 'normal'}}" bindtap="readdCount" data-index="{{index}}" data-value="{{item.adjustValue}}">+</text>  
+        </view>  
+      </view>
+      </view>
+      
+    </view>
+    </view>
+     <view class="add_box" wx:if="{{deliveryList.deliveryType == 3&&deliveryList.deliveryStatus == 2}}">
+    <view class="title"><image class="tit-icon" src="/static/images/3.png"></image>配送袋数
+    </view >
+    <view class="equi-wrap">
+    <view class="add-wrap"> 
+      <view class="add_box_bag">
+        <view class="addbag">配送袋数</view>
+        <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="sign {{num <= 0 ? 'disabled' : 'normal'}}" bindtap="redelBag">-</text>  
+          <!-- 数值 -->  
+          <input class="number" type="number" bindchange="bindBagManual"  value="{{num}}"  />  
+          <!-- 加号 -->  
+          <text class="sign {{num >= 100 ? 'disabled' : 'normal'}}" bindtap="addBag" >+</text>  
+        </view>  
+      </view>
+      
+      </view>
+      
+    </view>
+    </view>
+    <view class="add_box" wx:if="{{deliveryList.deliveryType == 1&&deliveryList.deliveryStatus == 2&&status==0}}">
+    <view class="equi-wrap" wx:for="{{inputList}}" wx:key="index">
+    <view class="equiNum">设备编号：
+    <input class="equiNumber" bindchange="inputEqui" data-index="{{index}}" placeholder="请输入设备编号"></input>
+    </view>
+    <view class="add-wrap"> 
+      <view class="add_box_bag">
+        <view class="addbag">袋数</view>
+        <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="sign {{item.rechargeFlow <= 0 ? 'disabled' : 'normal'}}" bindtap="delInpitCount" data-index="{{index}}"  >-</text>  
+          <!-- 数值 -->  
+          <input class="number" type="number" bindchange="bindNumber" data-index="{{index}}" value="{{item.rechargeFlow}}"  />  
+          <!-- 加号 -->  
+          <text class="sign {{item.rechargeFlow >= 100 ? 'disabled' : 'normal'}}" bindtap="addinputCount"  data-index="{{index}}">+</text>  
+        </view>  
+      </view>
+      <view class="add_box_bag">
+        <view class="addbag">流量</view>
+        <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="sign {{item.adjustValue <= -10 ? 'disabled' : 'normal'}}" bindtap="redelinputValue" data-index="{{index}}" >-</text>  
+          <!-- 数值 -->  
+          <input class="number" type="number" bindchange="remandValue"  value="{{item.adjustValue}}" data-index="{{index}}" />  
+          <!-- 加号 -->  
+          <text class="sign {{item.adjustValue >= 10 ? 'disabled' : 'normal'}}" bindtap="readdinputValue" data-index="{{index}}" >+</text>  
+        </view>  
+        <image class="addmore1"   src="/static/images/del1.png" catchtap="delMore" data-index="{{index}}"></image>
+      </view>
+      </view>
+      
+    </view>
+  </view>
+  <view class="des_situation" wx:if="{{deliveryList.deliveryStatus == 3}}">
+  <view class="title">
+    <image class="tit-icon" src="/static/images/3.png"></image>情况描述</view>
+    <view>{{deliveryDesc}}</view>
+  </view>
+  <view class="des_situation" wx:if="{{deliveryList.deliveryStatus == 2}}">
+  <view class="title">
+    <image class="tit-icon" src="/static/images/4.png"></image>情况描述</view>
+  <textarea value="{{deliveryDesc}}" class="des_input" bindblur="getIptInfo"></textarea>
+  </view>
+    <view class="tianchong"></view>
+    <view class="boot_wrap" >
+
+<view class="btn_wrap" >
+    <view class="over_delivery" bindtap="overDelivery" wx:if="{{type == 2}}">完成配送</view>
+    <view class="over_delivery" wx:if="{{type == 3}}">已配送</view>
+     <view class="over_delivery" wx:if="{{type == 2}}" bindtap="cacel" data-id="{{deliveryList.deliveryId}}">取消配送</view>
+    <view class="over_delivery" bindtap="isDelivery" wx:if="{{type == 2&&deliveryList.deliveryType == 2}}">已有设备？</view>
+    <!-- <view class="over_delivery" bindtap="cacel" wx:if="{{deliveryList.sourceType==1}}" data-id="{{deliveryList.deliveryId}}">用户取消</view> -->
+</view>
+</view>
+    </view>
+      <!-- <button size="mini" class="addMore" catchtap="addMore" wx:if="{{deliveryList.deliveryType == 1&&deliveryList.deliveryStatus == 2&&status==0}}">添加更多</button> -->
+
+
+

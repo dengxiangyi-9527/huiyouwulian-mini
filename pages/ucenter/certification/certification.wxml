@@ -1,0 +1,18 @@
+<!--pages/ucenter/certification/certification.wxml-->
+<!-- <text>pages/ucenter/certification/certification.wxml</text> -->
+<view class="text">
+<icon type="info" size="20"></icon>
+<text decode="{{true}}" space="{{true}}" class="deities"> 认证申明：
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此认证仅需用户提供身份证正面照，用于用户身份信息确认，认证完成即刻销毁照片，平台并无数据留存，用户并无身份信息泄露风险！
+  </text>
+</view>
+<view class="wrap">
+<image class="photo" wx:if="{{pic1}}" src="{{pic1}}"></image>
+<!-- <view class="select" wx:if="{{pic1}}">重选</view> -->
+<image class="img" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2077330609,2832079773&fm=26&gp=0.jpg"  bindtap="upload" wx:if="{{!pic1}}"></image>
+<!-- <van-uploader class="pic"  bind:after-read="afterRead" /> -->
+<view class="select" wx:if="{{!pic1}}" > 上传身份证正面照（头像面）</view>
+</view>
+<!-- <view bindtap="upload">上传图片</view> -->
+<button type="primary" size="default" catchtap="finishedCerti">完成认证</button>
+

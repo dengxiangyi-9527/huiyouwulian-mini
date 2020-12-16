@@ -1,0 +1,29 @@
+/* pages/ucenter/certification/certification.wxss */
+.text{
+  font-size: 35rpx;
+  padding-left: 20rpx;
+}
+.pic{
+  margin-left:30rpx ;
+  /* margin-top: 130rpx; */
+}
+.photo{
+  margin-left: 10rpx;
+  width: 470rpx;
+  height: 320rpx;
+  /* border: 1rpx dashed black; */
+}
+.deities{
+  font-size: 25rpx;
+  /* font-family: simhei; */
+}
+.wrap{
+  margin: 50rpx;
+}
+.select{
+  padding: 10rpx 0;
+}
+.img{
+  width: 200rpx;
+  height: 200rpx;
+}

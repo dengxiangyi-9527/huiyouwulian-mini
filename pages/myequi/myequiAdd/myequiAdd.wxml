@@ -1,0 +1,55 @@
+<!--pages/myequi/myequiAdd/myequiAdd.wxml-->
+
+  <view class="form_box">
+    <view class="form_item">
+      <view class="item_label">计费模式</view>
+      <view class="item_info"><input disabled value="流量"></input></view>
+    </view>
+    <view class="form_item">
+      <view class="item_label">设备编号</view>
+      <view class="item_info"><input placeholder="请输入设备编号 (数字)" value="{{info.num}}" bindinput="getNum"></input></view>
+    </view>
+    <view class="form_item">
+      <view class="item_label">设备名称</view>
+      <view class="item_info"><input placeholder="请输入设备自定义名称" value="{{info.equiName}}" bindinput="getEquiName"></input></view>
+    </view>
+    <view class="form_item">
+      <view class="item_label">您的姓名</view>
+      <view class="item_info"><input placeholder="请输入您的姓名" value="{{info.name}}" bindinput="getName"></input></view>
+    </view>
+    <view class="form_item">
+      <view class="item_label">您的电话</view>
+      <view class="item_info"><input placeholder="请输入您的手机号" value="{{info.phoneNum}}" bindinput="getPhoneNum"></input></view>
+      <button class="user_column_item_phone" open-type="getPhoneNumber" bindgetphonenumber="bindPhoneNumber">获取电话</button>
+    </view>
+    <view class="form_item">
+      <view class="item_label">装机地区</view>
+      <view class="item_info"><input placeholder="请输入您的装机地区" value="{{locationArea.address}}"  bindtap="getLocation"></input></view>
+      <!-- <button bindtap="map">定位</button> -->
+    </view>
+    <view class="form_item">
+      <view class="item_label">详细地址</view>
+      <view class="item_info"><input placeholder="请输入您的详细地址" value="{{info.areaDetail}}" bindinput="getAreaDetail"></input></view>
+    </view>
+    <!-- <view class="form_item">
+      <view class="item_label">所在楼层</view>
+      <view class="item_info"><input placeholder="请输入所在楼层" bindinput="getFloor"></input></view>
+    </view> -->
+    <view class="form_item">
+      <view class="item_label">有无电梯</view>
+      <view class="item_info"><switch checked="{{switchChecked}}" bindchange="switchChange"/></view>
+    </view>
+  </view>
+  <view class="form-default">
+    <view  class="default-input {{isDefault == 1 ? 'selected' : ''}}" catchtap="bindIsDefault">
+    <!-- <text >我已阅读并同意</text> -->
+    <text bindtap="goAgreement">我已阅读并同意《服务使用条款》</text>
+    </view>
+  </view>
+  <view class="form_btn" bindtap="goBind">
+    立即绑定
+  </view>
+  <!-- <view class="map_container">
+  <map class='map' longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' controls="{{controls}}" bindcontroltap="bindcontroltap" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap' bindcontroltap='bindcontroltap'
+    show-location></map>
+</view> -->

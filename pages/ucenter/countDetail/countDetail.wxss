@@ -1,0 +1,125 @@
+/* pages/ucenter/countDetail/countDetail.wxss */
+page{
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 260rpx;
+  width: 100%;
+  background-color: #FF7719;
+  text-align: center;
+  background-image:  linear-gradient(#FF7719,#FE5804);
+}
+.remainCount{
+  font-size: 30rpx;
+  color: #fff;
+  padding-top: 44rpx;
+}
+.top{
+  height: 180rpx;
+}
+.remainNum{
+  color: #fff;
+  font-size: 60rpx;
+  /* line-height: 40rpx; */
+}
+.bottom{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid rgba(255, 255, 255, 0.500);
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-right: 1rpx solid rgba(255, 255, 255, 0.500);
+}
+.right{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txt{
+  color: #fff;
+}
+.bott_img{
+  height: 40rpx;
+  width: 45rpx;
+  padding-right: 10rpx;
+}
+.content{
+  padding-top: 260rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.item{
+  margin: 0rpx 24rpx;
+  display: flex;
+  height: 170rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1rpx solid #f4f4f4;
+}
+.item_pic{
+  width: 100rpx;
+  height: 100rpx;
+}
+.itemInfo{
+  padding-left: 37rpx;
+  display: flex;
+  height: 100rpx;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.name{
+  color: #333;
+  font-size: 30rpx;
+}
+.time{
+  color: #999;
+  font-size: 26rpx;
+}
+.price{
+  color: #333;
+  font-size: 40rpx;
+}
+.item_left{
+  display: flex;
+}
+.tabTxt{
+  font-size: 40rpx;
+  color: #fff;
+}
+.nolist{
+  padding-top: 300rpx;
+}
+.botton_wrap{
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80rpx;
+  align-items: center;
+}
+.last_btn{
+  width: 50%;
+  text-align: center;
+  border-right: 1rpx solid #333;
+}
+.next_btn{
+  width: 50%;
+  text-align: center;
+
+}

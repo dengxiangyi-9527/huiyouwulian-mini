@@ -1,0 +1,42 @@
+<!--pages/ucenter/countDetail/countDetail.wxml-->
+<view class="container">
+<view class="header">
+<view class="top">
+<view class="remainCount">剩余积分</view>
+<view class="remainNum">{{totalCount}}</view>
+</view>
+<view class="bottom">
+<view class="left" bindtap="goIn" data-id="1">
+<image src="/static/images/in.png" class="bott_img"></image>
+<text class="txt" class="{{tab==1? 'tabTxt' : 'txt'}}">转入</text>
+</view>
+<view class="right" bindtap="goIn" data-id="2">
+<image src="/static/images/out.png" class="bott_img"></image>
+<text class="txt" class="{{tab==2? 'tabTxt' : 'txt'}}">转出</text>
+</view>
+</view>
+</view>
+<view class="content" wx:if="{{list&&list.length>0}}">
+<view class="item" wx:for="{{list}}" wx:key="index">
+<view class="item_left">
+<image src="{{item.membet_url}}" class="item_pic"></image>
+<!-- <image src="{{userInfo.avture}}" v-if="{{tab==1}}" class="item_pic"></image> -->
+<view class="itemInfo">
+<view class="name">{{item.real_name}}      {{item.phone}}</view>
+<view class="time">{{item.createTime}}</view>
+</view>
+</view>
+<view class="price" wx:if="{{tab==1}}">+ {{item.value}}</view>
+<view class="price" wx:if="{{tab==2}}">- {{item.value}}</view>
+</view>
+</view>
+<view class="content" wx:if="{{list&&list.length<=0}}">
+<view class="nolist">
+您还没有转送记录哦～
+</view>
+</view>
+</view>
+<view class="botton_wrap">
+<view class="last_btn" bindtap="lastPage">上一页</view>
+<view class="next_btn" bindtap="nextPage">下一页</view>
+</view>

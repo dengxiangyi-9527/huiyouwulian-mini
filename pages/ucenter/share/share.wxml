@@ -1,0 +1,3 @@
+ <!-- <view class="placeHoder"></view> -->
+ <canvas style="width:255px; height:400px;" canvas-id="myCanvas" />
+ <view bindtap="savePhoto"> 保存到相册</view>

@@ -1,0 +1,21 @@
+<view class="camera_box">
+  <camera class="camera" wx:if="{{!show}}" device-position="back" flash="off" binderror="error">
+    <cover-view class="id_m">
+      <cover-image class="img" src="/static/images/card.png"></cover-image>
+    </cover-view>
+  </camera>
+  <image class="camera_img" src="{{src}}" wx:if="{{show}}"></image>
+  <view class="action">
+    <!-- <button class="takeBtn" type="primary" bindtap="takePhoto" wx:if="{{!show}}"></button> -->
+    <!-- 拍照 -->
+    <view class="cine" wx:if="{{!show}}"  bindtap="takePhoto"><image src="/static/images/cinema.png"></image></view>
+    <view class="cine" wx:if="{{show}}"  bindtap="cancelBtn"><image src="/static/images/cha.png"></image></view>
+    <view class="cine" wx:if="{{show}}"  bindtap="saveImg"><image src="/static/images/gou.png"></image></view>
+    <!-- 取消 -->
+    <!-- <button class="saveImg" type="primary" bindtap="saveImg" wx:if="{{show}}"></button> -->
+    <!-- <button class="cancelBtn" wx:if="{{show}}" type="primary" bindtap="cancelBtn"></button> -->
+    <!-- 确认 -->
+    
+  </view>
+</view>
+

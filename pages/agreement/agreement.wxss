@@ -1,0 +1,14 @@
+/* pages/licence/licence.wxss */
+
+.title {
+  text-align: center;
+  font-size: 20pt;
+  font-weight : bold;
+  margin: 20px;
+}
+
+.h1 {
+  text-align: left;
+  font-size: 16pt;
+  margin: 10px;
+}

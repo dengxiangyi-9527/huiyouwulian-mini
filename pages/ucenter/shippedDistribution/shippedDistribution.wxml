@@ -1,0 +1,34 @@
+<view class="container">
+<view class="no-deliverlist" wx:if="{{deliveryList&&deliveryList.length <= 0}}">未有完成的配送信息</view>
+  <view class="address-list" wx:else="{{deliveryList&&deliveryList.length > 0}}">
+     <view class="item"  wx:for="{{deliveryList}}" data-id="{{item.id}}" wx:key="index">
+    <view  class="item-info" catchtap="getDetailInfo" data-id="{{index}}" >
+        <view class="l" >
+        <image class="l_pic" src="{{item.goodsPicUrl}}"></image>
+          
+      </view>
+        
+        <view class="c">
+          <view class="mobile">{{item.deliveryId}}、{{item.goodsName}}</view>
+          <view class="address" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" data-deliveryAddress="{{item.deliveryAddress}}" catchtap="getAddressMap">
+          <image class="icon-phone"  src="/static/images/position.png"></image>
+        <text class="address-info">{{item.deliveryAddress}}</text>
+          </view>
+          <view class="tel"  >
+          
+          <image class="icon-phone" catchtap="phonecell" data-memberPhone="{{item.memberPhone}}" src="/static/images/phone.png"></image>
+          <text class="tel-info" >电话：{{item.memberPhone}}</text> </view>
+            <view class="tel" catchtap="phonecell"  >
+          <image class="icon-phone"  src="/static/images/time.png"></image>
+          <text class="tel-info"> 配送完成时间:{{item.deliveryEndTm}}</text> </view>
+          <!-- <view>13688079577</view> -->
+        </view>
+      <!-- <view class="r" >
+      <image class="claim-icon" src="/static/images/claim.png"></image>
+      <view class="claim">认领</view>
+      </view> -->
+      </view>
+    </view>
+  </view>
+  
+</view>

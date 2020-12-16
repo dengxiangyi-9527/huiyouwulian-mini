@@ -1,0 +1,9 @@
+
+{
+  "backgroundColor": "#f4f4f4",
+  "navigationBarTitleText": "实名认证",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
+}

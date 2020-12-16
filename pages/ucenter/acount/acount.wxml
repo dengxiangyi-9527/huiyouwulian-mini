@@ -1,0 +1,73 @@
+<view class="container">
+
+<view class="queryBox" wx:if="{{isReal ==1}}">
+   <view class="selc_area" catchtap="getSelect">
+    <text class="cityName">{{status}}</text><image wx:if="{{isShow==false}}" class="sel_img" src="/static/images/select.png"></image><image wx:if="{{isShow==true}}" class="sel_img" src="/static/images/select1.png"></image>
+    </view>
+     <view class="type_area" catchtap="selectType">
+    <text class="cityName">{{type}}</text><image wx:if="{{typeStatus==false}}" class="sel_img" src="/static/images/select.png"></image><image wx:if="{{typeStatus==true}}" class="sel_img" src="/static/images/select1.png"></image>
+    </view>
+    <view class="btn" catchtap="cashout">提现</view>
+    <view class="statusList" wx:if="{{isShow==true}}">
+    <view class="status_item" data-value='' data-name='所有' catchtap="choceStatus">所有</view>
+    <view class="status_item" data-value='0' data-name='待提现' catchtap="choceStatus">待提现</view>
+    <view class="status_item" data-value='1' data-name='零钱到账' catchtap="choceStatus">零钱到账</view>
+    <view class="status_item" data-value='2' data-name='已提现' catchtap="choceStatus">已提现</view>
+    <!-- <view class="status_item" data-value='3' data-name='提现转账中' catchtap="choceStatus">提现转账中</view>
+    
+    <view class="status_item" data-value='5' data-name='提现审批中' catchtap="choceStatus">提现审批中</view> -->
+    </view>
+    <view class="typeList" wx:if="{{typeStatus==true}}">
+    <view class="status_item" data-value='' data-name='所有' catchtap="chooseType">所有</view>
+    <view class="status_item" data-value='1' data-name='设备认领' catchtap="chooseType">设备认领</view>
+    <view class="status_item" data-value='2' data-name='推广分润' catchtap="chooseType">推广分润</view>
+    <view class="status_item" data-value='3' data-name='运营管理' catchtap="chooseType">运营管理</view>
+    <view class="status_item" data-value='4' data-name='区域分润' catchtap="chooseType">区域分润</view>
+    <view class="status_item" data-value='5' data-name='加权分红' catchtap="chooseType">加权分红</view>
+    </view>
+    <!-- <button size="mini">提现</button> -->
+  </view>
+  <view class="no-collect" wx:if="{{orderList.length <= 0&&isReal ==1}}">
+    <view class="c">
+      <image src="/static/images/background.png" />
+      <text>还没有记录哦～</text>
+    </view>
+  </view>
+  <view class="no-collect" wx:if="{{isReal !==1}}">
+    <view class="c">
+      <image src="/static/images/background.png" />
+      <text>您还没实名认证</text>
+      <text class="isReal" catchtap="goCertification">去实名认证</text>
+    </view>
+  </view>
+
+  
+  <view class="collect-list" wx:if="{{orderList.length > 0&&isReal ==1}}" >
+  
+    <view class="item" bindtap="openGoods" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:for="{{orderList}}" wx:key="id" data-index="{{index}}">
+        <view class="info">
+        <view class="name">订单编号：{{item.orderNo}}</view>
+        <view class="subtitle">分润类型：<text wx:if="{{item.profitsType  == 1}}">设备认领</text> <text wx:if="{{item.profitsType  == 2}}">推广分润</text>
+        <text wx:if="{{item.profitsType  == 3}}">管理奖</text>
+        </view>
+        <view class="price">分润金额：{{item.amountProfits}}</view>
+        <view class="subtitle">状态：
+        <text wx:if="{{item.status  == 0}}">待提现</text> 
+        <text wx:if="{{item.status  == 2}}">已提现</text>
+        <text wx:if="{{item.status  == 1}}">已提现零钱</text>
+        <text wx:if="{{item.status  == 3}}">转账中</text>
+        <text wx:if="{{item.status  == 4}}">支付宝余额到账</text>
+        <text wx:if="{{item.status  == 5}}">提现审批中</text>
+        </view>
+        <view class="price">分润时间：{{item.createTime}}</view>
+         <view class="subtitle">描述：<text>{{item.dsc}}</text></view>
+         <view catchtap="isCash" data-money="{{item.amountProfits}}" data-id="{{item.payProfitsRecordId}}" data-status="{{item.status}}" data-status="{{item.status}}">
+         
+         <image class="pic1"   wx:if="{{!item.checked&&item.select==true}}"  src="/static/images/sel.png"></image>
+         <image class="pic1"   wx:if="{{item.checked}}" src="/static/images/seled.png"></image>
+         </view>
+      </view>
+    </view>
+  </view>
+
+</view>

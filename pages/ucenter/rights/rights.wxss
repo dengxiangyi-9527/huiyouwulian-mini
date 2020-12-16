@@ -1,0 +1,66 @@
+/* pages/ucenter/rights/rights.wxss */
+/* pages/myequi/myequiAdd/myequiAdd.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+/* form_box */
+.form_box{
+  height: auto;
+  background-color: #fff;
+}
+.form_box .form_item{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+.form_box .form_item input,switch{
+  padding-left: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.form_box .form_item .item_label{
+  padding-left: 50rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+/*  选中 */
+.form-default text{
+  color: #62788d;
+}
+.default-input {
+  width: 490rpx;
+  margin: 40rpx auto;
+  height: 40rpx;
+  padding-left: 50rpx;
+  line-height: 40rpx;
+  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 1rpx -448rpx no-repeat;
+  background-size: 38rpx 486rpx;
+  font-size: 28rpx;
+}
+
+.default-input.selected {
+  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 0 -192rpx no-repeat;
+  background-size: 38rpx 486rpx;
+}
+.form_btn{
+  width: 700rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 25rpx;
+  text-align: center;
+  background-color: #0092ff;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+}
+.user_column_item_phone{
+  width: auto;
+  height: 60rpx;
+  margin: auto ;
+  line-height: 60rpx;
+  font-size: 25rpx;
+}

@@ -1,0 +1,91 @@
+<view class="{{hasInfo&&hasLogin&&isReal==1?'container':'empty' }}">
+<view class="no-collect" wx:if="{{hasLogin==false}}">
+    <view class="c">
+      <image src="/static/images/equi.png" />
+      <text>请先登陆并实名认证</text>
+      <button style="background-color:#A9A9A9" catchtap="goLogin">去登录/实名认证</button>
+    </view>
+  </view>
+  <view class="no-collect" wx:if="{{hasLogin==true&& isReal==0}}">
+    <view class="c">
+      <image src="/static/images/equi.png" />
+      <text >还没有实名认证</text>
+      <button style="background-color:#A9A9A9" catchtap="goCertification">去实名认证</button>
+    </view>
+  </view>
+  <view class="no-collect" wx:if="{{!hasInfo && hasLogin==true&& isReal==1}}">
+    <view class="c" bindtap="addEqui">
+      <image src="/static/images/equi.png" />
+      <text >点击添加设备</text>
+      <button style="background-color:#A9A9A9" catchtap="addEqui">添加设备</button>
+    </view>
+  </view>
+  <view class="have-collect" wx:if="{{hasInfo==true&& hasLogin==true&& isReal==1}}">
+    <view class="top_wrap">
+					 		<view class="flow_wrap">
+					 			<image src="/static/images/equiFlow.png" class="wrap_img"></image>
+								<view class="txt" wx:if="{{equiList.tdsJ<0}}">
+									水质:优
+								</view><view class="txt" wx:if="{{equiList.tdsJ<=130&&equiList.tdsJ>=0}}">
+									水质:良
+								</view><view class="txt" wx:if="{{equiList.tdsJ>130}}">
+									水质:差
+								</view>
+					 		</view>
+							<view class="flow_wrap">
+								<image src="/static/images/nomarl.png" class="wrap_img" 
+                wx:if="{{equiList.status==1}}"></image>
+								<image src="/static/images/wraning.png" class="wrap_img" 
+                wx:if="{{equiList.status!=1}}"></image>
+								<view class="txt">
+								<text wx:if="{{equiList.status==1}}">正常</text> <text wx:if="{{equiList.status== 2}}">欠费</text>
+								<text wx:if="{{equiList.status==3}}">故障</text> <text wx:if="{{equiList.status == 4}}">关机</text>
+								<text wx:if="{{equiList.status==8}}">频发</text> <text wx:if="{{equiList.status==11}}">缺水</text>
+								
+								</view>
+							</view>
+							<view class="flow_wrap1" catchtap="getMore">
+					 			<image src="/static/images/equiMore.png" class="wrap_img"></image>
+								<view class="txt">
+									更多
+								</view>
+					 		</view>
+							<view wx:if="{{show}}" class="getMore" style="background-image: url(../../static/ /bc.png);background-repeat: no-repeat;background-size: 100% 95%;">
+								<view class="addEqui" catchtap="addEqui">
+									添加设备
+								</view>
+								<view class="addEqui1">
+									我的设备
+								</view>
+								<view class="equiId_list" wx:for="{{mainList}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" catchtap="getIndex">
+									<!-- {{item.deviceName}} -->
+									{{item.deviceId}}
+								</view>
+							</view>
+					 	</view>
+  <view class="flow">
+      <canvas canvas-id='bgCanvas' id='canvas-one'  class='canvasI'></canvas>
+      <canvas canvas-id="runCanvas" id="runCanvas" class='canvasII'></canvas>
+      <view class="today_use" wx:if="{{equiList.flowRemain<=10}}"> 亲，流量告急</view>
+      <view class="today_use1" wx:if="{{equiList.flowRemain>10}}"> 流量充足</view>
+      <view class="deviceId">设备编号 <text>{{equiList.deviceId }}</text></view>
+      <view class="deviceId1">剩余流量 <text>{{RemainFlow}}L</text></view>
+  </view>
+  <view class="sendWater">
+    <view class="water-btn1" wx:if="{{disabled}}">一键送水</view>
+    <view class="water-btn" wx:if="{{!disabled}}" bindtap="sendWater">一键送水</view>
+  </view>
+  <view class="middle_use">
+    <view class="middle_use_all">
+      <view class="all_flow">已用流量: <text>{{equiList.flowUsed  }}L</text></view>
+      <view class="all_time">已用时长: <text>{{equiList.useTime  }}天</text></view>
+    </view>
+    <view class="middle_use_today">
+      <view class="today_flow">今日使用: <text>{{equiList.todayFlow }}L</text>,<text>{{equiList.todayNumber }}次</text></view>
+      <view class="today_ave">今日平均: <text>{{equiList.todayFlow }}L/人</text></view>
+    </view>
+  </view>
+  </view>
+  
+
+</view>

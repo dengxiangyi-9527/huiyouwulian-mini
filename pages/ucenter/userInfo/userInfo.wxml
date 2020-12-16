@@ -1,0 +1,36 @@
+<!--pages/ucenter/userInfo/userInfo.wxml-->
+<view class="container">
+<view class="info">
+<image class="infoImg" src="{{userInfo.avatarUrl}}"></image>
+<view class="name">昵称: <text class="nickName">{{userInfo.nickName}}  </text>  
+</view>
+</view>
+<!-- <view class="wrap">
+<view class="myIdenterty">我的身份：<image class="userIcon" src="{{identity[memberPower].image}}"></image> {{identity[memberPower].text}} </view>
+</view> -->
+<view class="wrap1">
+<view class="isCertification">是否实名认证：{{identity1[isReal].text}}</view>
+</view>
+<view class="wrap1">
+<view class="isCertification">手机号：{{mobile}}</view>
+</view>
+<view class="wrap1">
+<view class="isCertification">邀请码：{{userInfo.inviteCode}}</view>
+</view>
+ <view class="wrap1">
+<view class="isCertification" bindtap='goFeedback'>意见反馈！</view>
+</view> 
+<view class="form-default">
+    <view  class="default-input {{isDefault == 1 ? 'selected' : ''}}">
+
+    <image catchtap="bindIsDefault" class="weiSel" src="/static/images/weiSel.png" wx:if="{{!isDefault}}"></image>
+    <image class="weiSel" src="/static/images/seled.png" catchtap="bindIsDefault1" wx:if="{{isDefault}}"></image>
+    <text bindtap="goAgreement">我已阅读并同意《注销条款》</text>
+    </view>
+  </view>
+ 
+
+<view class="layOut">
+<button class="btn" catchtap="goLayOut">注销账号</button>
+</view>
+</view>

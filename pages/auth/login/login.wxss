@@ -1,0 +1,35 @@
+.container{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.img_wrap{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin: 200rpx 0rpx;
+}
+.img{
+  
+  width: 350rpx;
+  height: 350rpx;
+}
+.btn{
+  width: 660rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 38rpx;
+  color: #fff;
+  background:linear-gradient(0deg,rgba(255,78,0,1),rgba(254,125,0,1));
+border-radius:20rpx;
+}
+.icon{
+  width: 62rpx;
+  line-height: 51rpx;
+  height: 51rpx;
+  padding-top: 10upx;
+  /* display: block; */
+}

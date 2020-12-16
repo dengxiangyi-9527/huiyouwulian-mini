@@ -1,0 +1,8 @@
+<view class="container">
+<view class="img_wrap">
+<image src="/static/images/no_login.png" class="img"></image></view>
+
+<!-- <view class="btn"  open-type="getUserInfo" bindgetuserinfo="wxLogin">  <image class="icon" src="/static/images/weichat.png"></image> 微信用户一键登录</view> -->
+     <button type="primary" open-type="getUserInfo" class="btn" bindgetuserinfo="wxLogin" disabled="{{disabled}}">微信直接登录</button>
+ 
+</view>

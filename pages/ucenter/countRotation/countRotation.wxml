@@ -1,0 +1,36 @@
+<view class="container">
+		<view class="zhuyi">
+			<image src="/static/images/1122.png" class="zhuyi_icon"></image><text>注意：转送积分一旦转送将从您账户扣除相应对的积分！转送积分实时到账。会员查询可输入手机号或会员真实名称</text>
+		</view>
+		<view class="allCount">
+			剩余积分：<text class="count_number">{{allCount}}</text>
+		</view>
+		<view class="chooseName">
+			<text class="send" >真实姓名:</text><input class="choose_ipt" bindblur="iptMember" value="{{memName}}" type="text" /><text class="search" bindtap="searchName">查询</text>
+		</view>
+		<!-- <view class="sendName"> -->
+			<view class="sendName">
+				请选择转送人：
+			</view>
+			<view class="no_name" wx:if="{{!show}}">
+				暂时无可选会员～
+			</view>
+			<view class="allName" wx:if="{{show}}">
+				<text class="name {{index== choseNum ? 'selName' : ''}}" data-index="{{index}}" data-item="{{item}}" wx:for="{{memberName}}" wx:key="index" bindtap="selName" >{{item.realName}}</text>
+			</view>
+		<!-- </view> -->
+		<view class="chooseName">
+			<text class="send">转送积分:</text><input  class="choose_ipt" type="number" bindblur="confirmCount" value="{{sendValue}}" /><text class="search" bindtap="confirmCount">确定</text>
+		</view>
+		<view class="confirm_info" >
+			<view class="confirm_name" >
+				转送人：{{name}}
+			</view> 
+			<view class="confirm_name" >
+				转送积分：{{value}}
+			</view> 
+		</view>
+		<view class="comfirm" bindtap="confirm">
+			确  定
+		</view>
+	</view>

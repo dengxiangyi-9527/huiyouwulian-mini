@@ -1,0 +1,204 @@
+
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+.no-deliverlist{
+  height: 300rpx;
+  line-height: 300rpx;
+  width: 100%;
+  text-align: center
+}
+.address-list {
+  padding-left: 31.25rpx;
+  /* background: #fff url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/address-bg-bd30f2bfeb.png) 0 0 repeat-x; */
+  background: #fff;
+  border: 1px solid #f4f4f4;
+  border-radius: 2%;
+  background-size: auto 10.5rpx;
+  margin-bottom: 90rpx;
+}
+
+.address-list .item {
+  height: 260rpx;
+  align-items: center;
+  margin-top: 40rpx;
+  /* display: flex; */
+  border-bottom: 1rpx solid #dcd9d9;
+}
+.item-info{
+  height: 200rpx;
+  align-items: center;
+  display: flex;
+  /* border-bottom: 1rpx solid #dcd9d9; */
+}
+.address-list .l {
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+}
+.address-list .l .l_pic{
+  width: 140rpx;
+  height: 140rpx;
+  vertical-align: middle;
+}
+.address-list .name {
+  width: 125rpx;
+  height: 43rpx;
+  font-size: 29rpx;
+  color: #333;
+  margin-bottom: 5.2rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.address-list .default {
+  width: 62.5rpx;
+  height: 33rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #b4282d;
+  border: 1rpx solid #b4282d;
+  visibility: visible;
+}
+
+.address-list .c {
+  flex: 1;
+  height: auto;
+  overflow: hidden;
+  margin-left: 15rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.address-list .c .address{
+  margin-top: 25rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.address-list .c .tel{
+  margin-top: 20rpx;
+  width: auto;
+}
+.address-list .c .tel .tel-info{
+  color: #333;
+  font-family: PingFang-SC-Regular;
+  font-weight: Regular;
+}
+.address-list .mobile {
+  height: 29rpx;
+  font-size: 29rpx;
+  line-height: 29rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: Bold;
+  overflow: hidden;
+  margin-top: 20rpx;
+  color: rgb(22, 19, 19);
+}
+
+.address-list .address {
+  height: 37rpx;
+  font-size: 25rpx;
+  line-height: 37rpx;
+  overflow: hidden;
+  color: #666;
+}
+.address-list .address .address-info{
+  color: #333333;
+  font-family: PingFang-SC-Regular;
+  font-weight: Regular;
+}
+.icon-phone{
+  width: 40rpx;
+  height: 35rpx;
+  vertical-align:middle;
+  /* margin-top: 5rpx; */
+  margin-right: 15rpx;
+  /* padding-top: 5rpx;  */
+}
+.address-list .r {
+  width: 100rpx;
+  height: auto;
+  text-align: center;
+  border-radius: 8rpx;
+  /* border: 1px solid #f66; */
+  /* background-color: #ed6d70; */
+  overflow: hidden;
+  /* padding-top: 30rpx; */
+  margin-right: 16rpx;
+}
+.address-list .r .claim-icon{
+  width: 40rpx;
+  height: 35rpx;
+}
+.address-list .r .claim{
+  /* font-weight: bold; */
+  color: #f66;
+  font-size: 20rpx;
+
+}
+.address-list .del {
+  display: block;
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.add-address {
+  border: none;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90rpx;
+  line-height: 98rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  margin-left: 5%;
+  text-align: center;
+  /* padding-left: -5rpx; */
+  font-size: 25rpx;
+  color: #f4f4f4;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  letter-spacing: 3rpx;
+  background-image: linear-gradient(to right, #9a9ba1 0%, #9a9ba1 100%);
+}
+
+.empty-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-view .icon {
+  height: 248rpx;
+  width: 258rpx;
+  margin-bottom: 10rpx;
+}
+
+.empty-view .text {
+  width: auto;
+  font-size: 28rpx;
+  line-height: 35rpx;
+  color: #999;
+}

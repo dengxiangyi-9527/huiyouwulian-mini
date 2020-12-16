@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="address-list" wx:if="{{ addressList.length > 0 }}">
+    <view class="item" wx:for="{{addressList}}" wx:key="id"  data-address-id="{{item.payWithdrawalBankId}}">
+      <view class="l">
+        <view class="name">{{item.bankName}}</view>
+        <view class="default" >{{item.userRealName}}</view>
+      </view>
+      <view class="c">
+        <view class="mobile">{{item.bankCard}}</view>
+        <view class="address">{{item.bankAddress}}</view>
+      </view>
+      <view class="r">
+        <image catchtap="deleteAddress" data-address-id="{{item.payWithdrawalBankId}}" class="del" src="/static/images/del-address.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="empty-view" wx:if="{{ addressList.length <= 0 }}">
+    <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+    <text class="text">银行卡在哪里</text>
+  </view>
+  <view class="add-address" bindtap="addressAddOrUpdate" data-address-id="0">新增卡片</view>
+</view>

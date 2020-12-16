@@ -1,0 +1,138 @@
+/* pages/ucenter/countRotation/countRotation.wxss */
+page{
+	width: 100%;
+	height: 100%;
+	background-color: #f4f4f4;
+}
+.container{
+	margin: 10rpx 20rpx;
+}
+.zhuyi{
+	display: flex;
+	align-items: center;
+	font-size: 24rpx;
+	color: #999;
+	margin-bottom: 20rpx;
+}
+.zhuyi_icon{
+	width: 60rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+}
+.allCount{
+	height: 100rpx;
+	/* width: 100%; */
+	padding-left: 20rpx;
+	/* margin-right: 20rpx; */
+	/* margin-left: 20rpx; */
+	background-color: #fff;
+	border-radius: 10rpx;
+	line-height: 100rpx;
+	/* padding-left: 20rpx; */
+	font-size: 30rpx;
+	color: #888;
+}
+.count_number{
+	font-size: 35rpx;
+	color: #FF771C;
+}
+.chooseName{
+	margin-top: 20rpx;
+	height: 150rpx;
+	/* line-height: 150rpx; */
+	width: 100%;
+	background-color: #fff;
+	border-radius: 10rpx;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+.choose_ipt{
+	border: 1rpx solid #c8c6ca;
+	flex: 1;
+	margin: 0 20rpx;
+	border-radius: 10rpx;
+	color: #555;
+	font-size: 30rpx;
+	padding-left: 20rpx;
+	height: 50rpx;
+}
+.no_name{
+	font-size: 28rpx;
+	color: #666;
+	width: 100%;
+	text-align: center;
+	/* margin: 0 auto; */
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.send{
+	color: #777;
+	font-size: 30rpx;
+	margin-left: 20rpx;
+}
+.search{
+	width: 100rpx;
+	text-align: center;
+	background-color: #FF771C;
+	color: #fff;
+	border-radius: 10rpx;
+	margin-left: 20rpx;
+	margin-right: 20rpx;
+	font-size: 30rpx;
+}
+.sendName{
+	margin-left: 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 30rpx;
+	color: #333;
+	margin-top: 20rpx;
+}
+.allName{
+	margin: 20rpx;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	
+}
+.name{
+	padding: 1rpx 10rpx;
+	border: 1rpx solid #FF771C;
+	border-radius: 10rpx;
+	color: #FF771C;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 30rpx;
+}
+.selName{
+	padding: 1rpx 10rpx;
+	/* border: 1rpx solid #FF771C; */
+	background-color: #FF771C;
+	border-radius: 10rpx;
+	color: #fff;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 30rpx;
+}
+.comfirm{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100rpx;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	border-radius: 30rpx;
+	line-height: 100rpx;
+	background: linear-gradient(270deg, rgba(254, 82, 0, 1), rgba(255, 142, 0, 1));
+}
+.confirm_info{
+	position: fixed;
+	bottom: 120rpx;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 36rpx;
+	color: #555;
+	
+}
